@@ -81,13 +81,24 @@ async function fetchQueue() {
       time,
       status: "waiting",
     };
-    await supabase.from('waitlist').insert([
-  {
-    name: newQ.name,
-    phone,
-    guests: newQ.guests
-  }
-])
+    const { error } = await supabase
+  .from('waitlist')
+  .insert([
+    {
+      name: newQ.name,
+      phone,
+      guests: newQ.guests,
+      status: 'waiting'
+    }
+  ])
+
+if (error) {
+  console.log(error)
+  toast.show("Something went wrong")
+  return
+}
+
+fetchQueue()
     const newWait = Math.max(
   15,
   queue.filter((q) => q.status !== "seated").length * 12
