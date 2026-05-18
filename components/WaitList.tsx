@@ -88,10 +88,12 @@ async function fetchQueue() {
     guests: newQ.guests
   }
 ])
-    const next = [...queue, newQ];
-    const newWait = Math.max(15, next.filter((q) => q.status !== "seated").length * 12);
-    setQueue(next);
-    setWaitMin(newWait);
+    const newWait = Math.max(
+  15,
+  queue.filter((q) => q.status !== "seated").length * 12
+);
+
+setWaitMin(newWait);
     setName("");
     setPhone("");
     setGuests("");
