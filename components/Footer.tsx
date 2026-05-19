@@ -113,6 +113,10 @@ export default function Footer() {
             </a>
           </div>
         </div>
+
+        <div className="mt-10 pt-6 border-t border-cream/10 text-center text-[0.7rem] tracking-[0.25em] uppercase text-cream/45">
+          Built by <span className="text-yellow-brand/85">Aviora</span> · Founder — Kanak Gupta
+        </div>
       </div>
     </footer>
   );
