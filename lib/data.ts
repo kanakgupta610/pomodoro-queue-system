@@ -10,11 +10,6 @@ export const HERO_SCENES = [
     text: "Hand-rolled. Hand-shaped. The dough kneaded fresh every morning.",
   },
   {
-    video: "/assets/v3.mp4",
-    title: "Hear the kitchen sing",
-    text: "Pans hissing. Espresso pulling. Cheese being shaved tableside.",
-  },
-  {
     video: "/assets/v4.mp4",
     title: "Taste why we exist",
     text: "Every plate is a love letter to the Italian table.",

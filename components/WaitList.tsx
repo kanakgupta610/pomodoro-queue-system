@@ -8,7 +8,7 @@ export default function WaitList() {
   const toast = useToast();
   const [queue, setQueue] = useState<QueueEntry[]>([]);
   const [waitMin, setWaitMin] = useState(45);
-  const [seatedToday, setSeatedToday] = useState(23);
+  const [seatedToday, setSeatedToday] = useState(60);
 
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -192,9 +192,8 @@ const remove = async (id: number) => {
               </div>
             </div>
 
-            <div className="grid grid-cols-3 gap-4 mb-10">
+            <div className="grid grid-cols-2 gap-4 mb-10">
               <StatBox num={activeCount} label="In Queue" />
-              <StatBox num={8} label="Tables Total" />
               <StatBox num={seatedToday} label="Seated Today" />
             </div>
 
